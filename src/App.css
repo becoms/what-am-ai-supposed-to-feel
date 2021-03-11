@@ -1,0 +1,87 @@
+body {
+  font-family: sans-serif;
+  background-color: #333;
+}
+
+.app {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  vertical-align: bottom;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-image: url("https://media4.giphy.com/media/1WEnLc6uuLea1AgHHo/giphy.gif");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.expression-badge {
+  position: absolute;
+  bottom: 1rem;
+  left: 2rem;
+  background-color: #000;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.grid {
+  position: absolute;
+  width: 100vw;
+  line-height: 0;
+  column-count: 4;
+  column-gap: 0px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.grid-item img {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  color: transparent;
+}
+
+@media (max-width: 1200px) {
+  .grid {
+    column-count: 4;
+  }
+}
+
+@media (max-width: 1000px) {
+  .grid {
+    column-count: 3;
+  }
+}
+
+@media (max-width: 800px) {
+  .grid {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 400px) {
+  .grid {
+    column-count: 1;
+  }
+}
