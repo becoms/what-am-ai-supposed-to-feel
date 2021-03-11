@@ -31,16 +31,6 @@ body {
   background-size: cover;
 }
 
-.expression-badge {
-  position: absolute;
-  bottom: 1rem;
-  left: 2rem;
-  background-color: #000;
-  color: #fff;
-  padding: 10px 15px;
-  border-radius: 5px;
-}
-
 .grid {
   position: absolute;
   width: 100vw;
@@ -49,17 +39,25 @@ body {
   column-gap: 0px;
 }
 
-img {
+.grid-item img {
   width: 100%;
   height: auto;
-}
-
-.grid-item img {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   display: block;
   color: transparent;
+}
+
+.expression-badge {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  background-color: #1b1f23;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  line-height: 1;
 }
 
 @media (max-width: 1200px) {
@@ -84,4 +82,43 @@ img {
   .grid {
     column-count: 1;
   }
+}
+
+.github {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  display: flex;
+  align-items: center;
+  background-color: #1b1f23;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+
+  border: 2px solid transparent;
+  transition: color 300ms;
+}
+
+.github svg {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.github svg path {
+  transition: fill 300ms;
+}
+
+.github span {
+  line-height: 1rem;
+}
+
+.github:hover {
+  color: #ffa300;
+}
+
+.github:hover svg path {
+  fill: #ffa300;
 }
