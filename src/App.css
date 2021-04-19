@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: sans-serif;
   background-color: #333;
@@ -104,15 +108,15 @@ body {
 .github svg {
   width: 20px;
   height: 20px;
-  margin-right: 10px;
 }
 
-.github svg path {
+svg path {
   transition: fill 300ms;
 }
 
 .github span {
   line-height: 1rem;
+  margin-left: 10px;
 }
 
 .github:hover {
@@ -121,4 +125,84 @@ body {
 
 .github:hover svg path {
   fill: #ffa300;
+}
+
+.help-button {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  text-transform: none;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  padding: 10px 10px;
+  background-color: #1b1f23;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.help-button svg {
+  width: 30px;
+  height: 30px;
+}
+
+.help-button:hover svg path {
+  fill: #ffa300;
+}
+
+.help-modal {
+  z-index: 9999;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 720px;
+  width: 100%;
+  padding: 2rem 1rem;
+  color: #fff;
+}
+
+.help-modal::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #1b1f23;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+.help-modal ul {
+  padding-left: 0;
+  margin-bottom: 2rem;
+  list-style-type: none;
+}
+
+.help-modal ul li {
+  margin-bottom: 0.5rem;
+}
+
+.help-modal button {
+  background-color: transparent;
+  font-weight: 600;
+  padding: 10px 15px;
+  border-radius: 3px;
+  border: 2px solid #fff;
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+  background-color: #fff;
+  color: #333;
+  transition: 200ms;
+}
+
+.help-modal button:hover {
+  background-color: transparent;
+  color: #fff;
 }
